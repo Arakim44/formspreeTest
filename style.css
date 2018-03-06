@@ -1,3 +1,89 @@
+.page-section {
+
+    padding:1.2rem 0;
+}
+
+@media (min-width: 768px) {
+
+.page-section {
+        padding: 2rem 0
+}
+    }
+
+.page-section--no-b-padding-until-medium {
+        padding-bottom:0;
+    }
+
+@media (min-width: 768px) {
+
+.page-section--no-b-padding-until-medium {
+            padding-bottom: 4.5rem
+    }
+    }
+
+.page-section--no-b-padding-until-large {
+
+        padding-bottom:0;
+
+    }
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
+            padding-bottom: 3rem
+
+    }
+    }
+
+.page-section__red {
+        background-color: #a49b94;
+    }
+
+.page-section__red p {
+        color: #FFF;
+    }
+
+.page-section--members {
+
+        background-color: #a49b94;
+    }
+
+@media (min-width: 768px) {
+
+.page-section--members {
+            
+            background:url('../../assets/images/background-white.jpg') top center no-repeat;
+            background-size: cover
+    }
+    }
+
+/* &--portfolio {
+        background-color: #85715c;
+        color: ;
+
+        @mixin atMedium {
+            
+            background:url('../../assets/images/wood-background.jpg') top center no-repeat;
+            background-size: cover;
+        }
+    } */
+
+.page-section--contact {
+        background-color: #909090;
+
+    }
+
+@media (min-width: 768px) {
+
+.page-section--contact {
+            
+            background:url('../../assets/images/address-background.jpg') top center no-repeat;
+            background-size: cover
+
+    }
+    }
+
+
 .form__wrapper {
         background:rgba(255,255,255,.9);
         width:100%;
