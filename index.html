@@ -10,15 +10,31 @@
   <!-- build:css assets/styles/styles.css -->
 <!--   <link rel="stylesheet" href="style.css"> -->
   <!-- endbuild -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   
 
 </head>
 <body>
-
-
-
   
+  
+  <form id='contact_form' method='POST'>
+  <div class='large-12 columns'>
+    <p id='thanks' style='display: none;'>
+      Thanks for contacting us, we'll be in touch soon!
+    </p>
+  </div>
+  <div class='medium-12 columns'>
+    <input class='required' name='name' placeholder='NAME' type='text'>
+    <input class='required email' name='email' placeholder='EMAIL' type='text'>
+    <input class='required' name='subject' placeholder='SUBJECT' type='text'>
+    <textarea class='required' name='message' placeholder='MESSAGE'></textarea>
+    <input class='button white' type='submit'>
+  </div>
+
+
+
+<!--   
 
 
 <div class="page-section page-section--no-b-padding-until-large page-section--contact">
@@ -178,17 +194,9 @@
 </div>
 
 
-
-  <footer class="site-footer">
-    <div class="wrapper">
-      <p><span class="site-footer__text">Copyright &copy; 2018 Anderson Construction. All rights reserved.</span>
-         <!-- <a href="#" class="btn btn__yellow">Get in Touch</a> -->
-      </p>
-    </div>
-  </footer>
-
-    <!-- build:js assets/scripts/App.js  -->
-    <script src="/temp/scripts/App.js"></script>
-    <!-- endbuild  -->
+ -->
+ 
+    <script src="form.js"></script>
+ 
 </body>
 </html>
