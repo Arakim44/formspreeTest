@@ -1,37 +1,28 @@
 $(document).ready(function() {
-
-    $('#someForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        //get the name field value
-        var name = $('#name').val();
-        //get the name field value
-        var email = $('#email').val();
-        //get the comments
-        var comments = $('#comments').val();
-                    
-        //pretend we don't need validation
-        
-        //send to formspree
+  $('#contact-form').submit(function(e) {
+      var name = $('#inputName')
+      var email = $('#inputEmail')
+      var message = $('#inputMessage')
+    
+      if(name.val() == "" || email.val() == "" || message.val() == "") {
+        $('.submit-fail').fadeToggle(400);
+        return false;
+      }
+      else {
         $.ajax({
-            url:'https://formspree.io/ahrakim44@gmail.com',
-            method:'POST',
-            data:{
-                name:name,
-                _replyto:email,
-                 email:email,
-                comments:comments,
-                _subject:'My Form Submission',
-            },
-            dataType:"json",
-            success:function() {
-                console.log('success'); 
-                $('#formBlock').hide();
-                $('#thankyouBlock').show();
-            }   
-
-        });     
-        
+          method: 'POST',
+          url: '//formspree.io/ahrakim44@gmail.com',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        $('.submit-success').fadeToggle(400);
+      }
     });
-
-}); 
+  
+  $('.submit-fail, .submit-success').click(function() {
+    $(this).hide();
+  })
+});
+  
