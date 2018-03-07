@@ -21,13 +21,13 @@
       <h2 class="headline--small">Contact Us</h2>
       <p class="form__text">Please complete the fields below and we will respond to your inquiry within 48 hours.</p>
     </div>
-    <form method="POST" action="https://formspree.io/ahrakim44@gmail.com">
+    <form id="contact-form" method="POST" action="https://formspree.io/ahrakim44@gmail.com">
       <!-- name field -->
       <div class="row clearfix">
         <div class="col_half">
           <label>Full Name (ex. firstname lastname)</label>
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user form__icon"></i></span>
-            <input type="text" name="Name" placeholder="John Doe" required />
+            <input id="inputName" type="text" name="Name" placeholder="John Doe" required />
           </div>
         </div>
         
@@ -158,6 +158,7 @@
         </div>
       </div>
       <input class="button" type="submit" value="SEND" />
+<input type="hidden" name="_next" value="//site.io/thanks.html" />
     </form>
   </div>
 </div>
@@ -167,7 +168,7 @@
 
 
 	  
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="form.js"></script>
+<!--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="form.js"></script> -->
     
   </body>
